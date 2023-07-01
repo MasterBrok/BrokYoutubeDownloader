@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:BrokYoutubeDownloader"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:us="clr-namespace:BrokYoutubeDownloader.UserControls"
     Width="1200"
     Height="720"
     AllowsTransparency="True"
@@ -23,11 +24,13 @@
             </Grid.RowDefinitions>
             <Border Grid.Row="0" Style="{StaticResource stHeaderBorder}">
                 <DockPanel LastChildFill="True">
-                    <Label
-                        HorizontalAlignment="Left"
-                        VerticalAlignment="Top"
-                        Content="Developer : Brok"
-                        Style="{StaticResource stLabelHeader}" />
+                    <StackPanel>
+                        <Label
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Developer : Brok"
+                            Style="{StaticResource stLabelHeader}" />
+                    </StackPanel>
                     <StackPanel
                         HorizontalAlignment="Right"
                         VerticalAlignment="Center"
@@ -38,6 +41,17 @@
                     </StackPanel>
                 </DockPanel>
             </Border>
+            <ScrollViewer
+                Grid.Row="1"
+                Margin="10"
+                Style="{StaticResource stScrollViewer}">
+                <StackPanel>
+                    <us:usItem
+                        Width="800"
+                        Height="180"
+                        HorizontalAlignment="Right" />
+                </StackPanel>
+            </ScrollViewer>
         </Grid>
     </Border>
 </Window>

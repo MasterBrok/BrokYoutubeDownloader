@@ -9,6 +9,20 @@
     <SolidColorBrush x:Key="ForegroundButtonDownload" Color="#5C4E00" />
 
 
-    <SolidColorBrush x:Key="ForegroundLabelInfo" Color="#523602" />
+    <SolidColorBrush x:Key="ForegroundLabelInfo" Color="#FFCE73" />
+
+
+
+    <SolidColorBrush x:Key="BackgroundUserControl" Color="#1C1800" />
+    <SolidColorBrush x:Key="BorderUserControl" Color="#F0CE0C" />
+
+
+    <SolidColorBrush x:Key="ForegroundLabelTitle" Color="#FFEC80" />
+    <SolidColorBrush x:Key="ForegroundLabelValue" Color="#DBBA00" />
+
+
+
+
+
 
 </ResourceDictionary>

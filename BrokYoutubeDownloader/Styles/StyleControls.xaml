@@ -5,4 +5,8 @@
         <Setter Property="FontFamily" Value="Rounded MPlus 1c" />
         <Setter Property="Margin" Value="10,0,0,0" />
     </Style>
+    <Style x:Key="stScrollViewer" TargetType="ScrollViewer">
+        <Setter Property="VerticalScrollBarVisibility" Value="Hidden" />
+        <Setter Property="HorizontalScrollBarVisibility" Value="Hidden" />
+    </Style>
 </ResourceDictionary>

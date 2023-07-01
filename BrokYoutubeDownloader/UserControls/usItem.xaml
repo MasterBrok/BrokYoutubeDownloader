@@ -1,0 +1,87 @@
+﻿<UserControl
+    x:Class="BrokYoutubeDownloader.UserControls.usItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:BrokYoutubeDownloader.UserControls"
+    xmlns:cc="clr-namespace:BrokYoutubeDownloader.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="200"
+    d:DesignWidth="400"
+    mc:Ignorable="d">
+    <Border
+        Background="{DynamicResource BackgroundUserControl}"
+        BorderBrush="{DynamicResource BorderUserControl}"
+        BorderThickness="2"
+        CornerRadius="20 0 0 20">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <WrapPanel Margin="5">
+                <cc:ccLabel Title="Name" Value="Brok"/>
+                <cc:ccLabel Title="Title" Value="Brok"/>
+                <cc:ccLabel Title="Duration" Value="Brok"/>
+            </WrapPanel>
+            <StackPanel Grid.Row="1">
+                <ProgressBar>
+                    <ProgressBar.Style>
+                        <Style TargetType="{x:Type ProgressBar}">
+                            <Setter Property="Height" Value="50" />
+                            <Setter Property="BorderBrush" Value="Gainsboro" />
+                            <Setter Property="BorderThickness" Value="2" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ProgressBar}">
+                                        <Border
+                                            x:Name="brdMain"
+                                            Width="{TemplateBinding Width}"
+                                            Height="{TemplateBinding Height}"
+                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                            BorderThickness="{TemplateBinding BorderThickness}"
+                                            CornerRadius="10"
+                                            DockPanel.Dock="Right">
+                                            <StackPanel Margin="2" Orientation="Horizontal">
+
+                                                <Rectangle
+                                                    x:Name="Value"
+                                                    Width="40"
+                                                    Fill="Gold">
+                                                    <Rectangle.Style>
+                                                        <Style TargetType="Rectangle">
+                                                            <Setter Property="RadiusX" Value="5" />
+                                                            <Setter Property="RadiusY" Value="5" />
+                                                            <Setter Property="Margin" Value="5" />
+                                                            <Setter Property="Effect">
+                                                                <Setter.Value>
+                                                                    <BlurEffect KernelType="Gaussian" Radius="5" />
+                                                                </Setter.Value>
+                                                            </Setter>
+                                                        </Style>
+                                                    </Rectangle.Style>
+                                                </Rectangle>
+                                            </StackPanel>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <EventTrigger RoutedEvent="Loaded">
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <DoubleAnimation
+                                                            Storyboard.TargetName="Value"
+                                                            Storyboard.TargetProperty="Width"
+                                                            To="780" />
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ProgressBar.Style>
+                </ProgressBar>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>
