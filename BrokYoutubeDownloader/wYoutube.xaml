@@ -37,7 +37,10 @@
                         DockPanel.Dock="Right"
                         Orientation="Vertical">
                         <cc:ccTextBox />
-                        <cc:ccButton Margin="0,20,0,0" Content="Go" Click="ccButton_Click" />
+                        <cc:ccButton
+                            Margin="0,20,0,0"
+                            Click="ccButton_Click"
+                            Content="Go" />
                     </StackPanel>
                 </DockPanel>
             </Border>
@@ -48,12 +51,11 @@
                 <StackPanel x:Name="spItems">
                     <StackPanel.Resources>
                         <Style TargetType="us:usItem">
-                            <Setter Property="Width" Value="800"/>
-                            <Setter Property="Height" Value="180"/>
-                            <Setter Property="HorizontalAlignment" Value="Right"/>
+                            <Setter Property="Width" Value="800" />
+                            <Setter Property="Height" Value="180" />
+                            <Setter Property="HorizontalAlignment" Value="Right" />
                         </Style>
                     </StackPanel.Resources>
-
                 </StackPanel>
             </ScrollViewer>
         </Grid>

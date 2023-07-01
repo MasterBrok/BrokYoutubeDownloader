@@ -24,6 +24,11 @@ namespace BrokYoutubeDownloader.UserControls
         {
             InitializeComponent();
         }
+        public usItem(object model)
+        {
+            InitializeComponent();
+            this.DataContext = model;
+        }
 
         public event EventHandler<EventArgs> Path_Click;
 

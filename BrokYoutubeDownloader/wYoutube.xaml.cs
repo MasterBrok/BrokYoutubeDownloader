@@ -51,7 +51,6 @@ namespace BrokYoutubeDownloader
             };
             item.Path_Click += usItem_Path_Click;
             item.MouseEnter += Item_MouseEnter;
-            item.ccLabel1.Title = spItems.Children.Count + "";
             spItems.Children.Add(item);
 
         }
@@ -59,7 +58,6 @@ namespace BrokYoutubeDownloader
         private void Item_MouseEnter(object sender, MouseEventArgs e)
         {
             privateTag = (sender as UserControls.usItem).MyTag;
-            //MessageBox.Show(tag + "");
         }
 
         public UserControls.usItem UsItem(object tag)
