@@ -14,5 +14,15 @@
     WindowStartupLocation="CenterScreen"
     WindowStyle="None"
     mc:Ignorable="d">
-    <Border Style="{DynamicResource stMainWindow}" />
+    <Border Style="{StaticResource stMainWindow}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" Style="{StaticResource stHeaderBorder}">
+                <DockPanel />
+            </Border>
+        </Grid>
+    </Border>
 </Window>
