@@ -5,4 +5,10 @@
     <SolidColorBrush x:Key="ForegroundTextBoxSearch" Color="#523602" />
     <SolidColorBrush x:Key="BackgroundtextBoxSearch" Color="#CFB006" />
 
+    <SolidColorBrush x:Key="BackgroundButtonDownload" Color="#DEBD00" />
+    <SolidColorBrush x:Key="ForegroundButtonDownload" Color="#5C4E00" />
+
+
+    <SolidColorBrush x:Key="ForegroundLabelInfo" Color="#523602" />
+
 </ResourceDictionary>
