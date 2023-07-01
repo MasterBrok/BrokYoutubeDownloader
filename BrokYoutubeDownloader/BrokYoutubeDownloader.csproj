@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <Folder Include="Converter\" />
-    <Folder Include="Controls\" />
   </ItemGroup>
 
 </Project>

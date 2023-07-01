@@ -1,4 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <SolidColorBrush x:Key="BackgroundMainWindow" Color="#0F0000" />
     <SolidColorBrush x:Key="HeaderBackgroundMainWindow" Color="#FFDA08" />
+
+    <SolidColorBrush x:Key="ForegroundTextBoxSearch" Color="#523602" />
+    <SolidColorBrush x:Key="BackgroundtextBoxSearch" Color="#CFB006" />
+
 </ResourceDictionary>
