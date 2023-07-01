@@ -9,7 +9,9 @@
     x:Name="wMain"
     d:DesignHeight="200"
     d:DesignWidth="400"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Loaded="wMain_Loaded"
+    >
     <Border
         Background="{DynamicResource BackgroundUserControl}"
         BorderBrush="{DynamicResource BorderUserControl}"
@@ -20,14 +22,26 @@
                 <RowDefinition Height="2*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <WrapPanel Margin="5">
-                <cc:ccLabel Title="Name" Value="Brok" />
-                <cc:ccLabel Title="Title" Value="Brok" />
-                <cc:ccLabel Title="Duration" Value="Brok" />
-            </WrapPanel>
+            <StackPanel Margin="5" Orientation="Vertical">
+                <DockPanel LastChildFill="True">
+                    <cc:ccLabel Title="Name" Value="{Binding ThisTitle}" />
+                    <cc:ccLabel Title="Title" Value="Brok" />
+                    <cc:ccLabel Title="Duration" Value="Brok" />
+                </DockPanel>
+                <DockPanel LastChildFill="True">
+                    <cc:ccLabel Title="Channel" Value="Brok" />
+                    <cc:ccLabel Title="Size(mg)" Value="Brok" />
+                </DockPanel>
+                <DockPanel LastChildFill="True">
+                    <cc:ccLabel Title="DateUpload" Value="Brok" />
+                    <cc:ccLabel Title="Link Video" Value="Brok" />
+                </DockPanel>
+                <cc:ccLabel Title="Description" Value="Brok" />
+
+            </StackPanel>
             <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center">
                 <Path
-                    Width="10"
+                    Width="20"
                     Data="{StaticResource svgRemove}"
                     MouseLeftButtonDown="Path_MouseLeftButtonDown"
                     Stroke="{StaticResource StrokeSvgRemove}"
@@ -35,62 +49,7 @@
                     Tag="{Binding MyTag}" />
             </StackPanel>
             <StackPanel Grid.Row="1">
-                <ProgressBar>
-                    <ProgressBar.Style>
-                        <Style TargetType="{x:Type ProgressBar}">
-                            <Setter Property="Height" Value="50" />
-                            <Setter Property="BorderBrush" Value="Gainsboro" />
-                            <Setter Property="BorderThickness" Value="2" />
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="{x:Type ProgressBar}">
-                                        <Border
-                                            x:Name="brdMain"
-                                            Width="{TemplateBinding Width}"
-                                            Height="{TemplateBinding Height}"
-                                            BorderBrush="{TemplateBinding BorderBrush}"
-                                            BorderThickness="{TemplateBinding BorderThickness}"
-                                            CornerRadius="10"
-                                            DockPanel.Dock="Right">
-                                            <StackPanel Margin="2" Orientation="Horizontal">
-
-                                                <Rectangle
-                                                    x:Name="Value"
-                                                    Width="40"
-                                                    Fill="Gold">
-                                                    <Rectangle.Style>
-                                                        <Style TargetType="Rectangle">
-                                                            <Setter Property="RadiusX" Value="5" />
-                                                            <Setter Property="RadiusY" Value="5" />
-                                                            <Setter Property="Margin" Value="5" />
-                                                            <Setter Property="Effect">
-                                                                <Setter.Value>
-                                                                    <BlurEffect KernelType="Gaussian" Radius="5" />
-                                                                </Setter.Value>
-                                                            </Setter>
-                                                        </Style>
-                                                    </Rectangle.Style>
-                                                </Rectangle>
-                                            </StackPanel>
-                                        </Border>
-                                        <ControlTemplate.Triggers>
-                                            <EventTrigger RoutedEvent="Loaded">
-                                                <BeginStoryboard>
-                                                    <Storyboard>
-                                                        <DoubleAnimation
-                                                            Storyboard.TargetName="Value"
-                                                            Storyboard.TargetProperty="Width"
-                                                            To="780" />
-                                                    </Storyboard>
-                                                </BeginStoryboard>
-                                            </EventTrigger>
-                                        </ControlTemplate.Triggers>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </ProgressBar.Style>
-                </ProgressBar>
+                <cc:ccProgressBar ValueRect="{Binding ProValue}" />
             </StackPanel>
         </Grid>
     </Border>

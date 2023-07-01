@@ -30,6 +30,11 @@
                             VerticalAlignment="Top"
                             Content="Developer : Sama And Brok"
                             Style="{StaticResource stLabelHeader}" />
+                        <Label
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="UIUX : Brok"
+                            Style="{StaticResource stLabelHeader}" />
                     </StackPanel>
                     <StackPanel
                         HorizontalAlignment="Right"

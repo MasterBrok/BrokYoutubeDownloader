@@ -23,6 +23,19 @@ namespace BrokYoutubeDownloader
     /// </summary>
     public partial class MainWindow : Window
     {
+        // Find Element MyTag
+        public UserControls.usItem FindElementByTag(object tag)
+        {
+            foreach (var item in spItems.Children)
+            {
+                if (item is usItem us && us.MyTag == tag)
+                {
+                    return us;
+                }
+            }
+            return null;
+        }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -35,7 +48,7 @@ namespace BrokYoutubeDownloader
         public object privateTag { get; set; }
         private void usItem_Path_Click(object sender, EventArgs e)
         {
-            var userControlToDelete = UsItem(privateTag);
+            var userControlToDelete = this.FindElementByTag(privateTag);
             if (userControlToDelete != null)
             {
                 spItems.Children.Remove(userControlToDelete);
@@ -59,19 +72,6 @@ namespace BrokYoutubeDownloader
         {
             privateTag = (sender as UserControls.usItem).MyTag;
         }
-
-        public UserControls.usItem UsItem(object tag)
-        {
-            foreach (var item in spItems.Children)
-            {
-                if (item is usItem us && us.MyTag == tag)
-                {
-                    return us;
-                }
-            }
-            return null;
-        }
-
 
 
     }

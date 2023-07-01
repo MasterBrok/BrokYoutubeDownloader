@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using YoutubeExplode;
 
 namespace BrokYoutubeDownloader.UserControls
 {
@@ -24,13 +16,16 @@ namespace BrokYoutubeDownloader.UserControls
         {
             InitializeComponent();
         }
-        public usItem(object model)
+
+        public double ProValue
         {
-            InitializeComponent();
-            this.DataContext = model;
+            get { return (double)GetValue(ProValueProperty); }
+            set { SetValue(ProValueProperty, value); }
         }
 
-        public event EventHandler<EventArgs> Path_Click;
+        // Using a DependencyProperty as the backing store for ProValue.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ProValueProperty =
+            DependencyProperty.Register("ProValue", typeof(double), typeof(usItem), new PropertyMetadata(default));
 
 
         public object MyTag
@@ -38,12 +33,11 @@ namespace BrokYoutubeDownloader.UserControls
             get { return (object)GetValue(MyTagProperty); }
             set { SetValue(MyTagProperty, value); }
         }
-
-        // Using a DependencyProperty as the backing store for MyTag.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty MyTagProperty =
             DependencyProperty.Register("MyTag", typeof(object), typeof(usItem), new PropertyMetadata(default));
 
 
+        public event EventHandler<EventArgs> Path_Click;
         private void Path_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (Path_Click != null)

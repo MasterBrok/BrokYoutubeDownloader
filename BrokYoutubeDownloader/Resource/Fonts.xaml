@@ -1,3 +1,4 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <FontFamily x:Key="FontMain">Rounded MPlus 1c</FontFamily>
+    <FontFamily x:Key="FontHeader">Barlow Condensed Light</FontFamily>
 </ResourceDictionary>
