@@ -9,7 +9,7 @@
     <SolidColorBrush x:Key="ForegroundButtonDownload" Color="#5C4E00" />
 
 
-    <SolidColorBrush x:Key="ForegroundLabelInfo" Color="#FFCE73" />
+    <SolidColorBrush x:Key="ForegroundLabelInfo" Color="#805300" />
 
 
 
@@ -20,7 +20,7 @@
     <SolidColorBrush x:Key="ForegroundLabelTitle" Color="#FFEC80" />
     <SolidColorBrush x:Key="ForegroundLabelValue" Color="#DBBA00" />
 
-
+    <SolidColorBrush x:Key="StrokeSvgRemove" Color="#FFD900" />
 
 
 

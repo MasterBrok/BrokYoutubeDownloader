@@ -28,7 +28,7 @@
                         <Label
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top"
-                            Content="Developer : Brok"
+                            Content="Developer : Sama And Brok"
                             Style="{StaticResource stLabelHeader}" />
                     </StackPanel>
                     <StackPanel
@@ -37,7 +37,7 @@
                         DockPanel.Dock="Right"
                         Orientation="Vertical">
                         <cc:ccTextBox />
-                        <cc:ccButton Margin="0,20,0,0" Content="Go" />
+                        <cc:ccButton Margin="0,20,0,0" Content="Go" Click="ccButton_Click" />
                     </StackPanel>
                 </DockPanel>
             </Border>
@@ -45,11 +45,15 @@
                 Grid.Row="1"
                 Margin="10"
                 Style="{StaticResource stScrollViewer}">
-                <StackPanel>
-                    <us:usItem
-                        Width="800"
-                        Height="180"
-                        HorizontalAlignment="Right" />
+                <StackPanel x:Name="spItems">
+                    <StackPanel.Resources>
+                        <Style TargetType="us:usItem">
+                            <Setter Property="Width" Value="800"/>
+                            <Setter Property="Height" Value="180"/>
+                            <Setter Property="HorizontalAlignment" Value="Right"/>
+                        </Style>
+                    </StackPanel.Resources>
+
                 </StackPanel>
             </ScrollViewer>
         </Grid>

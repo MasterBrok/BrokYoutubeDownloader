@@ -9,4 +9,16 @@
         <Setter Property="VerticalScrollBarVisibility" Value="Hidden" />
         <Setter Property="HorizontalScrollBarVisibility" Value="Hidden" />
     </Style>
+    <Style x:Key="stPath" TargetType="Path">
+        <Setter Property="Stretch" Value="Uniform" />
+        <Setter Property="Stroke" Value="Black" />
+        <Setter Property="StrokeThickness" Value="2" />
+        <Setter Property="Margin" Value="5" />
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Opacity" Value="0.8" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
 </ResourceDictionary>
