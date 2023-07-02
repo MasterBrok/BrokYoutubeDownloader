@@ -6,9 +6,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:BrokYoutubeDownloader.UserControls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mm="clr-namespace:BrokYoutubeDownloader.Models"
     x:Name="wMain"
     d:DesignHeight="200"
     d:DesignWidth="400"
+    Loaded="wMain_Loaded"
     mc:Ignorable="d">
     <Border
         Background="{DynamicResource BackgroundUserControl}"
@@ -22,19 +24,19 @@
             </Grid.RowDefinitions>
             <StackPanel Margin="5" Orientation="Vertical">
                 <DockPanel LastChildFill="True">
-                    <cc:ccLabel Title="Name" Value="{Binding ThisTitle}" />
-                    <cc:ccLabel Title="Title" Value="Brok" />
-                    <cc:ccLabel Title="Duration" Value="Brok" />
+                    <cc:ccLabel Title="Name" Value="{Binding Name, Mode=TwoWay}" />
+                    <cc:ccLabel Title="Title" Value="{Binding Title, Mode=TwoWay}" />
+                    <cc:ccLabel Title="Duration" Value="{Binding Duration, Mode=TwoWay}" />
                 </DockPanel>
                 <DockPanel LastChildFill="True">
-                    <cc:ccLabel Title="Channel" Value="Brok" />
-                    <cc:ccLabel Title="Size(mg)" Value="Brok" />
+                    <cc:ccLabel Title="Channel" Value="{Binding Channel, Mode=TwoWay}" />
+                    <cc:ccLabel Title="Size(mg)" Value="{Binding Size, Mode=TwoWay}" />
                 </DockPanel>
                 <DockPanel LastChildFill="True">
-                    <cc:ccLabel Title="DateUpload" Value="Brok" />
-                    <cc:ccLabel Title="Link Video" Value="Brok" />
+                    <cc:ccLabel Title="DateUpload" Value="{Binding DateUpload, Mode=TwoWay}" />
+                    <cc:ccLabel Title="Link Video" Value="{Binding Link, Mode=TwoWay}" />
                 </DockPanel>
-                <cc:ccLabel Title="Description" Value="Brok" />
+                <cc:ccLabel Title="Description" Value="{Binding Description, Mode=TwoWay}" />
 
             </StackPanel>
             <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center">

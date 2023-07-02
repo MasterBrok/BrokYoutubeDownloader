@@ -1,9 +1,14 @@
-﻿using System;
+﻿using BrokYoutubeDownloader.Models;
+using BrokYoutubeDownloader.YoutubeDownloader;
+using System;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using YoutubeExplode;
+using YoutubeExplode.Videos;
+using YoutubeExplode.Videos.Streams;
 
 namespace BrokYoutubeDownloader.UserControls
 {
@@ -12,6 +17,8 @@ namespace BrokYoutubeDownloader.UserControls
     /// </summary>
     public partial class usItem : UserControl
     {
+        private Models.Video video = new Models.Video();
+
         public usItem()
         {
             InitializeComponent();
@@ -40,15 +47,19 @@ namespace BrokYoutubeDownloader.UserControls
         public event EventHandler<EventArgs> Path_Click;
         private void Path_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+
             if (Path_Click != null)
             {
                 Path_Click(sender, e);
             }
         }
 
-        private void wMain_Loaded(object sender, RoutedEventArgs e)
+        private async void wMain_Loaded(object sender, RoutedEventArgs e)
         {
+            string url = "https://www.youtube.com/shorts/COdRrGsmzwU";
 
+            Download download = new Download(url);
+            this.DataContext = await download.GetInfo();
         }
     }
 }

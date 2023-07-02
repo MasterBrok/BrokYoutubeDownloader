@@ -7,7 +7,7 @@
 
     <SolidColorBrush x:Key="BackgroundButtonDownload" Color="#DEBD00" />
     <SolidColorBrush x:Key="ForegroundButtonDownload" Color="#5C4E00" />
-    <SolidColorBrush x:Key="SelectionContent" Color="#CED1C807"/>
+    <SolidColorBrush x:Key="SelectionContent" Color="#CED1C807" />
 
     <SolidColorBrush x:Key="ForegroundLabelInfo" Color="#805300" />
 
