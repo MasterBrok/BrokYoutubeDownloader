@@ -24,6 +24,24 @@
             </Grid.RowDefinitions>
             <Border Grid.Row="0" Style="{StaticResource stHeaderBorder}">
                 <DockPanel LastChildFill="True">
+                    <StackPanel
+                        DockPanel.Dock="Top"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Right"
+                        Margin="0 0 40 0"
+                        Orientation="Horizontal"
+                        >
+                        <Path
+                            MouseLeftButtonDown="Path_MouseLeftButtonDown"
+                            Style="{StaticResource stPath}"
+                            Data="{StaticResource svgMinimize}"
+                            />
+                        <Path
+                            MouseLeftButtonDown="Path_MouseLeftButtonDown_1"
+                            Style="{StaticResource stPath}"
+                            Data="{StaticResource svgExit}"
+                            />
+                    </StackPanel>
                     <StackPanel>
                         <Label
                             HorizontalAlignment="Left"
@@ -34,6 +52,11 @@
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top"
                             Content="UIUX : Brok"
+                            Style="{StaticResource stLabelHeader}" />
+                        <Label
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Telegram : @BrokDotNet"
                             Style="{StaticResource stLabelHeader}" />
                     </StackPanel>
                     <StackPanel

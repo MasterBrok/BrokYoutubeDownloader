@@ -19,19 +19,26 @@ namespace BrokYoutubeDownloader.Windows
     /// </summary>
     public partial class wUsMessageBox : Window
     {
-        public wUsMessageBox()
+        public wUsMessageBox(string Message)
         {
             InitializeComponent();
+            lblMessage.Value = Message;
         }
-
+        public bool isClose { get; set; }
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
                 DragMove();
         }
-
-        private void MessagBox_Close_UserControl(object sender, EventArgs e)
+        private void ccButton_Click(object sender, RoutedEventArgs e)
         {
+            isClose = true;
+            this.Close();
+        }
+
+        private void Path_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            isClose = false;
             this.Close();
         }
     }

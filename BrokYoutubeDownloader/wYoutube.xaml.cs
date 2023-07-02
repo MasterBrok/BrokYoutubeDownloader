@@ -58,7 +58,7 @@ namespace BrokYoutubeDownloader
 
         private void ccButton_Click(object sender, RoutedEventArgs e)
         {
-            if (spItems.Children.Count < 5)
+            if (spItems.Children.Count < 4)
             {
                 var item = new UserControls.usItem()
                 {
@@ -71,9 +71,9 @@ namespace BrokYoutubeDownloader
             }
             else
             {
-                var message = new Windows.wUsMessageBox();
+                var message = new Windows.wUsMessageBox("You can only have 4 files downloading at the same time.");
+
                 message.ShowDialog();
-                
             }
         }
 
@@ -82,6 +82,24 @@ namespace BrokYoutubeDownloader
             privateTag = (sender as UserControls.usItem).MyTag;
         }
 
+        private void Path_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
 
+        private void Path_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
+        {
+            if (spItems.Children.Count > 0)
+            {
+                var message = new Windows.wUsMessageBox("Are you sure Exit ? (OK == Exit)");
+                message.ShowDialog();
+                if (message.isClose == true)
+                {
+                    this.Close();
+                }
+            }
+            else
+                Application.Current.Shutdown();
+        }
     }
 }
