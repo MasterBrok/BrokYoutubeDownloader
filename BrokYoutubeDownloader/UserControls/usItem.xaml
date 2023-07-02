@@ -10,7 +10,6 @@
     d:DesignHeight="200"
     d:DesignWidth="400"
     mc:Ignorable="d"
-    Loaded="wMain_Loaded"
     >
     <Border
         Background="{DynamicResource BackgroundUserControl}"

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Reflection.PortableExecutable;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -57,15 +58,23 @@ namespace BrokYoutubeDownloader
 
         private void ccButton_Click(object sender, RoutedEventArgs e)
         {
-            var item = new UserControls.usItem()
+            if (spItems.Children.Count < 5)
             {
-                Name = spItems.Name + spItems.Children.Count,
-                MyTag = spItems.Children.Count,
-            };
-            item.Path_Click += usItem_Path_Click;
-            item.MouseEnter += Item_MouseEnter;
-            spItems.Children.Add(item);
-
+                var item = new UserControls.usItem()
+                {
+                    Name = spItems.Name + spItems.Children.Count,
+                    MyTag = spItems.Children.Count,
+                };
+                item.Path_Click += usItem_Path_Click;
+                item.MouseEnter += Item_MouseEnter;
+                spItems.Children.Add(item);
+            }
+            else
+            {
+                var message = new Windows.wUsMessageBox();
+                message.ShowDialog();
+                
+            }
         }
 
         private void Item_MouseEnter(object sender, MouseEventArgs e)

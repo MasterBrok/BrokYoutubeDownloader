@@ -45,5 +45,10 @@ namespace BrokYoutubeDownloader.UserControls
                 Path_Click(sender, e);
             }
         }
+
+        private void wMain_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
