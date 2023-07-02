@@ -18,10 +18,11 @@ namespace BrokYoutubeDownloader.UserControls
     public partial class usItem : UserControl
     {
         private Models.Video video = new Models.Video();
-
-        public usItem()
+        private string _url;
+        public usItem(string url)
         {
             InitializeComponent();
+            _url = url;
         }
 
         public double ProValue
@@ -55,10 +56,8 @@ namespace BrokYoutubeDownloader.UserControls
         }
 
         private async void wMain_Loaded(object sender, RoutedEventArgs e)
-        {
-            string url = "https://www.youtube.com/shorts/COdRrGsmzwU";
-
-            Download download = new Download(url);
+        {   
+            Download download = new Download(_url);
             this.DataContext = await download.GetInfo();
         }
     }

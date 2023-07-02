@@ -60,7 +60,7 @@ namespace BrokYoutubeDownloader
         {
             if (spItems.Children.Count < 4)
             {
-                var item = new UserControls.usItem()
+                var item = new UserControls.usItem(txtUrl.Text.Trim())
                 {
                     Name = spItems.Name + spItems.Children.Count,
                     MyTag = spItems.Children.Count,
@@ -72,7 +72,6 @@ namespace BrokYoutubeDownloader
             else
             {
                 var message = new Windows.wMeessageBox("You can only have 4 files downloading at the same time.");
-
                 message.ShowDialog();
             }
         }

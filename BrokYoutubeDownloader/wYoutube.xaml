@@ -61,7 +61,7 @@
                         VerticalAlignment="Center"
                         DockPanel.Dock="Right"
                         Orientation="Vertical">
-                        <cc:ccTextBox />
+                        <cc:ccTextBox x:Name="txtUrl" />
                         <cc:ccButton
                             Margin="0,20,0,0"
                             Click="ccButton_Click"
