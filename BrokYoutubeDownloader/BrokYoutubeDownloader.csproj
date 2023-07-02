@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Converter\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="YoutubeExplode" Version="6.2.16" />
   </ItemGroup>
 

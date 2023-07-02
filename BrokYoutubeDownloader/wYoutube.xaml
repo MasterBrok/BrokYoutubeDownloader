@@ -25,22 +25,19 @@
             <Border Grid.Row="0" Style="{StaticResource stHeaderBorder}">
                 <DockPanel LastChildFill="True">
                     <StackPanel
-                        DockPanel.Dock="Top"
-                        VerticalAlignment="Top"
+                        Margin="0,0,40,0"
                         HorizontalAlignment="Right"
-                        Margin="0 0 40 0"
-                        Orientation="Horizontal"
-                        >
+                        VerticalAlignment="Top"
+                        DockPanel.Dock="Top"
+                        Orientation="Horizontal">
                         <Path
-                            MouseLeftButtonDown="Path_MouseLeftButtonDown"
-                            Style="{StaticResource stPath}"
                             Data="{StaticResource svgMinimize}"
-                            />
+                            MouseLeftButtonDown="Path_MouseLeftButtonDown"
+                            Style="{StaticResource stPath}" />
                         <Path
-                            MouseLeftButtonDown="Path_MouseLeftButtonDown_1"
-                            Style="{StaticResource stPath}"
                             Data="{StaticResource svgExit}"
-                            />
+                            MouseLeftButtonDown="Path_MouseLeftButtonDown_1"
+                            Style="{StaticResource stPath}" />
                     </StackPanel>
                     <StackPanel>
                         <Label

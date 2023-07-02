@@ -1,5 +1,5 @@
 ﻿<Window
-    x:Class="BrokYoutubeDownloader.Windows.wUsMessageBox"
+    x:Class="BrokYoutubeDownloader.Windows.wMeessageBox"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:cc="clr-namespace:BrokYoutubeDownloader.Controls"
@@ -23,16 +23,14 @@
         CornerRadius="20">
         <Grid>
             <StackPanel
-                VerticalAlignment="Top"
+                Margin="0,0,20,0"
                 HorizontalAlignment="Right"
-                Margin="0 0 20 0"
-                >
+                VerticalAlignment="Top">
                 <Path
+                    Data="{StaticResource svgExit}"
                     MouseLeftButtonDown="Path_MouseLeftButtonDown"
                     Stroke="{StaticResource HeaderBackgroundMainWindow}"
-                    Data="{StaticResource svgExit}"
-                    Style="{StaticResource stPath}"
-                    />
+                    Style="{StaticResource stPath}" />
             </StackPanel>
             <StackPanel
                 Margin="0,0,0,40"
@@ -41,8 +39,8 @@
                 <cc:ccLabel
                     x:Name="lblMessage"
                     Title="Brok "
-                    Value=""
-                    FontSize="14" />
+                    FontSize="14"
+                    Value="" />
             </StackPanel>
             <StackPanel
                 Margin="0,0,0,30"

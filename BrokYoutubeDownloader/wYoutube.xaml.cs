@@ -71,7 +71,7 @@ namespace BrokYoutubeDownloader
             }
             else
             {
-                var message = new Windows.wUsMessageBox("You can only have 4 files downloading at the same time.");
+                var message = new Windows.wMeessageBox("You can only have 4 files downloading at the same time.");
 
                 message.ShowDialog();
             }
@@ -91,7 +91,7 @@ namespace BrokYoutubeDownloader
         {
             if (spItems.Children.Count > 0)
             {
-                var message = new Windows.wUsMessageBox("Are you sure Exit ? (OK == Exit)");
+                var message = new Windows.wMeessageBox("Are you sure Exit ? (OK == Exit)");
                 message.ShowDialog();
                 if (message.isClose == true)
                 {

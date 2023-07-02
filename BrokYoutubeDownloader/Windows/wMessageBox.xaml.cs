@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace BrokYoutubeDownloader.Windows
 {
     /// <summary>
-    /// Interaction logic for wUsMessageBox.xaml
+    /// Interaction logic for wMeessageBox.xaml
     /// </summary>
-    public partial class wUsMessageBox : Window
+    public partial class wMeessageBox : Window
     {
-        public wUsMessageBox(string Message)
+        public wMeessageBox(string Message)
         {
             InitializeComponent();
             lblMessage.Value = Message;
