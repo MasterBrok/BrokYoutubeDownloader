@@ -1,13 +1,6 @@
-﻿using BrokYoutubeDownloader.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.AccessControl;
-using System.Text;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using System.Windows.Media;
 using YoutubeExplode;
-using YoutubeExplode.Videos;
 
 namespace BrokYoutubeDownloader.YoutubeDownloader
 {
@@ -41,7 +34,14 @@ namespace BrokYoutubeDownloader.YoutubeDownloader
             video.Duration = info.Duration.ToString();
             video.Description = info.Description;
             video.DateUpload = info.UploadDate.ToString();
+            YoutubeClient client = new YoutubeClient();
+            var t = await client.Videos.Streams.GetManifestAsync(Link);
+            var file = t.GetVideoOnlyStreams().Select(e => e.Size.Bytes);
+            foreach (double item in file)
+            {
+                video.Size = item;
+            }
             return video;
-        }
+            }
     }
 }

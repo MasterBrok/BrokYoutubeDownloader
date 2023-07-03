@@ -1,6 +1,8 @@
 ﻿using BrokYoutubeDownloader.Models;
 using BrokYoutubeDownloader.YoutubeDownloader;
 using System;
+using System.Diagnostics;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,7 +25,9 @@ namespace BrokYoutubeDownloader.UserControls
         {
             InitializeComponent();
             _url = url;
+
         }
+
 
         public double ProValue
         {
@@ -56,9 +60,32 @@ namespace BrokYoutubeDownloader.UserControls
         }
 
         private async void wMain_Loaded(object sender, RoutedEventArgs e)
-        {   
+        {
             Download download = new Download(_url);
-            this.DataContext = await download.GetInfo();
+            video = await download.GetInfo();
+            this.DataContext = video;
+
+
+            var youtube = new YoutubeClient();
+            var streamManifest = await youtube.Videos.Streams.GetManifestAsync(_url);
+            var streamInfo = streamManifest
+    .GetVideoOnlyStreams()
+    .Where(s => s.Container == Container.Mp4)
+    .GetWithHighestVideoQuality();
+            var stream = await youtube.Videos.Streams.GetAsync(streamInfo);
+
+
+            Progress<double> progress = new Progress<double>();
+
+            progress.ProgressChanged += Progress_ProgressChanged;
+            await youtube.Videos.Streams.DownloadAsync(streamInfo, $"video.{streamInfo.Container}", progress);
+
+        }
+
+        private void Progress_ProgressChanged(object? sender, double e)
+        {
+            progValue.ValueRect = e * 100;
+            lbl.Title = progValue.ValueRect + "";
         }
     }
 }

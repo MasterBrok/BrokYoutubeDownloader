@@ -31,6 +31,7 @@
                 <DockPanel LastChildFill="True">
                     <cc:ccLabel Title="Channel" Value="{Binding Channel, Mode=TwoWay}" />
                     <cc:ccLabel Title="Size(mg)" Value="{Binding Size, Mode=TwoWay}" />
+                    <cc:ccLabel x:Name="lbl" Title="" />
                 </DockPanel>
                 <DockPanel LastChildFill="True">
                     <cc:ccLabel Title="DateUpload" Value="{Binding DateUpload, Mode=TwoWay}" />
@@ -49,7 +50,14 @@
                     Tag="{Binding MyTag}" />
             </StackPanel>
             <StackPanel Grid.Row="1">
-                <cc:ccProgressBar Margin="5,0,5,0" ValueRect="{Binding ProValue}" />
+                <cc:ccProgressBar
+                    x:Name="progValue"
+                    Margin="5,0,5,0"
+                    ValueRect="{Binding ProValue}" />
+                <!--<ProgressBar
+                x:Name="progValue"
+                Height="40"
+                Margin="5,0,5,0" />-->
             </StackPanel>
         </Grid>
     </Border>

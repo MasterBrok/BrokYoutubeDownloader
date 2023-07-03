@@ -70,6 +70,7 @@ namespace BrokYoutubeDownloader
                     item.Path_Click += usItem_Path_Click;
                     item.MouseEnter += Item_MouseEnter;
                     spItems.Children.Add(item);
+                    txtUrl.Clear();
                 }
                 else
                 {
