@@ -58,22 +58,31 @@ namespace BrokYoutubeDownloader
 
         private void ccButton_Click(object sender, RoutedEventArgs e)
         {
-            if (spItems.Children.Count < 4)
+            if (Validates.ValidateUrl.IsYouTubeLinkValid(txtUrl.Text.Trim()) is true)
             {
-                var item = new UserControls.usItem(txtUrl.Text.Trim())
+                if (spItems.Children.Count < 4)
                 {
-                    Name = spItems.Name + spItems.Children.Count,
-                    MyTag = spItems.Children.Count,
-                };
-                item.Path_Click += usItem_Path_Click;
-                item.MouseEnter += Item_MouseEnter;
-                spItems.Children.Add(item);
+                    var item = new UserControls.usItem(txtUrl.Text.Trim())
+                    {
+                        Name = spItems.Name + spItems.Children.Count,
+                        MyTag = spItems.Children.Count,
+                    };
+                    item.Path_Click += usItem_Path_Click;
+                    item.MouseEnter += Item_MouseEnter;
+                    spItems.Children.Add(item);
+                }
+                else
+                {
+                    var message = new Windows.wMeessageBox("You can only have 4 files downloading at the same time.");
+                    message.ShowDialog();
+                }
             }
             else
             {
-                var message = new Windows.wMeessageBox("You can only have 4 files downloading at the same time.");
+                var message = new Windows.wMeessageBox("Url(Link) is Not Valid");
                 message.ShowDialog();
             }
+
         }
 
         private void Item_MouseEnter(object sender, MouseEventArgs e)
