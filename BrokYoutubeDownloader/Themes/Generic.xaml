@@ -137,7 +137,7 @@
                             <Rectangle
                                 x:Name="Value"
                                 Width="{TemplateBinding ValueRect}"
-                                Fill="Gold">
+                                Fill="#7858A6">
                                 <Rectangle.Style>
                                     <Style TargetType="Rectangle">
                                         <Setter Property="RadiusX" Value="5" />

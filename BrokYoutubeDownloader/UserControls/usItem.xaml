@@ -15,14 +15,14 @@
     <Border
         Background="{DynamicResource BackgroundUserControl}"
         BorderBrush="{DynamicResource BorderUserControl}"
-        BorderThickness="2"
+        BorderThickness="1,1,0,1"
         CornerRadius="20 0 0 20">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <StackPanel Margin="5" Orientation="Vertical">
+            <StackPanel Margin="8" Orientation="Vertical">
                 <DockPanel LastChildFill="True">
                     <cc:ccLabel Title="Name" Value="{Binding Name, Mode=TwoWay}" />
                     <cc:ccLabel Title="Title" Value="{Binding Title, Mode=TwoWay}" />
@@ -55,10 +55,6 @@
                     x:Name="progValue"
                     Margin="5,0,5,0"
                     ValueRect="{Binding ProValue}" />
-                <!--<ProgressBar
-                x:Name="progValue"
-                Height="40"
-                Margin="5,0,5,0" />-->
             </StackPanel>
         </Grid>
     </Border>

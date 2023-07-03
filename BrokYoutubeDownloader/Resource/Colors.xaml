@@ -1,26 +1,26 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <SolidColorBrush x:Key="BackgroundMainWindow" Color="#0F0000" />
-    <SolidColorBrush x:Key="HeaderBackgroundMainWindow" Color="#FFDA08" />
+    <SolidColorBrush x:Key="BackgroundMainWindow" Color="#4C3575" />
+    <SolidColorBrush x:Key="HeaderBackgroundMainWindow" Color="#371B58" />
 
-    <SolidColorBrush x:Key="ForegroundTextBoxSearch" Color="#523602" />
-    <SolidColorBrush x:Key="BackgroundtextBoxSearch" Color="#CFB006" />
+    <SolidColorBrush x:Key="ForegroundTextBoxSearch" Color="#DECEC2" />
+    <SolidColorBrush x:Key="BackgroundtextBoxSearch" Color="#4C3575" />
 
-    <SolidColorBrush x:Key="BackgroundButtonDownload" Color="#DEBD00" />
-    <SolidColorBrush x:Key="ForegroundButtonDownload" Color="#5C4E00" />
-    <SolidColorBrush x:Key="SelectionContent" Color="#CED1C807" />
+    <SolidColorBrush x:Key="BackgroundButtonDownload" Color="#7858A6" />
+    <SolidColorBrush x:Key="ForegroundButtonDownload" Color="#DECEC2" />
+    <SolidColorBrush x:Key="SelectionContent" Color="#A7E7CA" />
 
-    <SolidColorBrush x:Key="ForegroundLabelInfo" Color="#805300" />
-
-
-
-    <SolidColorBrush x:Key="BackgroundUserControl" Color="#1C1800" />
-    <SolidColorBrush x:Key="BorderUserControl" Color="#F0CE0C" />
+    <SolidColorBrush x:Key="ForegroundLabelInfo" Color="#FFF5EE" />
 
 
-    <SolidColorBrush x:Key="ForegroundLabelTitle" Color="#FFEC80" />
-    <SolidColorBrush x:Key="ForegroundLabelValue" Color="#DBBA00" />
 
-    <SolidColorBrush x:Key="StrokeSvgRemove" Color="#FFD900" />
+    <SolidColorBrush x:Key="BackgroundUserControl" Color="#4C3575" />
+    <SolidColorBrush x:Key="BorderUserControl" Color="#5B4B8A" />
+
+
+    <SolidColorBrush x:Key="ForegroundLabelTitle" Color="#DECEC2" />
+    <SolidColorBrush x:Key="ForegroundLabelValue" Color="#FFF5EE" />
+
+    <SolidColorBrush x:Key="StrokeSvgRemove" Color="#E7A7E3" />
 
 
 

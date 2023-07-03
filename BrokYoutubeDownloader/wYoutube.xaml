@@ -25,7 +25,7 @@
             <Border Grid.Row="0" Style="{StaticResource stHeaderBorder}">
                 <DockPanel LastChildFill="True">
                     <StackPanel
-                        Margin="0,0,40,0"
+                        Margin="0,0,10,0"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Top"
                         DockPanel.Dock="Top"
@@ -67,11 +67,12 @@
                             Click="ccButton_Click"
                             Content="Go" />
                     </StackPanel>
+
                 </DockPanel>
             </Border>
             <ScrollViewer
                 Grid.Row="1"
-                Margin="10"
+                Margin="0"
                 Style="{StaticResource stScrollViewer}">
                 <StackPanel x:Name="spItems">
                     <StackPanel.Resources>
