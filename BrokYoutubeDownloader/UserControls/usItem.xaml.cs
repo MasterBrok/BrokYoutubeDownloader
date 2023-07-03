@@ -31,6 +31,20 @@ namespace BrokYoutubeDownloader.UserControls
         }
 
 
+
+
+        public bool isFinish
+        {
+            get { return (bool)GetValue(isFinishProperty); }
+            set { SetValue(isFinishProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for isFinish.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty isFinishProperty =
+            DependencyProperty.Register("isFinish", typeof(bool), typeof(usItem), new PropertyMetadata(default));
+
+
+
         public double ProValue
         {
             get { return (double)GetValue(ProValueProperty); }
@@ -63,10 +77,6 @@ namespace BrokYoutubeDownloader.UserControls
 
         private async void wMain_Loaded(object sender, RoutedEventArgs e)
         {
-            var show = new SaveFileDialog();
-
-
-
             Download download = new Download(_url);
             video = await download.GetInfo();
             this.DataContext = video;
@@ -79,10 +89,6 @@ namespace BrokYoutubeDownloader.UserControls
     .GetWithHighestVideoQuality();
             var stream = await youtube.Videos.Streams.GetAsync(streamInfo);
 
-            show.ShowDialog();
-            show.Title = "Path Save";
-            show.FileName = "sdsd";
-            //var path = show.FileName;
             Progress<double> progress = new Progress<double>();
 
             progress.ProgressChanged += Progress_ProgressChanged;
@@ -92,6 +98,10 @@ namespace BrokYoutubeDownloader.UserControls
         private void Progress_ProgressChanged(object? sender, double e)
         {
             progValue.ValueRect = e * 765;
+            if (progValue.ValueRect > 700)
+            {
+                isFinish = true;
+            }
         }
     }
 }

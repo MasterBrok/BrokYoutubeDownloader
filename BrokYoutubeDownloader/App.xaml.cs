@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using BrokYoutubeDownloader.Windows;
 using System.Windows;
 
 namespace BrokYoutubeDownloader
@@ -13,5 +8,10 @@ namespace BrokYoutubeDownloader
     /// </summary>
     public partial class App : Application
     {
+        private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+            e.Handled = true;
+            _ = new wMeessageBox(e.Exception.Message).ShowDialog();
+        }
     }
 }

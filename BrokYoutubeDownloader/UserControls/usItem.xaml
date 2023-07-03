@@ -36,6 +36,7 @@
                 <DockPanel LastChildFill="True">
                     <cc:ccLabel Title="DateUpload" Value="{Binding DateUpload, Mode=TwoWay}" />
                     <cc:ccLabel Title="Link Video" Value="{Binding Link, Mode=TwoWay}" />
+                    <cc:ccLabel Title="is Download" Value="{Binding ElementName=wMain, Path=isFinish, Mode=TwoWay}" />
                 </DockPanel>
                 <cc:ccLabel Title="Description" Value="{Binding Description, Mode=TwoWay}" />
 
