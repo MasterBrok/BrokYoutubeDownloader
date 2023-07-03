@@ -1,4 +1,5 @@
 ﻿using BrokYoutubeDownloader.UserControls;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,6 +46,7 @@ namespace BrokYoutubeDownloader
         {
             if (e.LeftButton == MouseButtonState.Pressed)
                 DragMove();
+
         }
         public object privateTag { get; set; }
         private void usItem_Path_Click(object sender, EventArgs e)
@@ -62,6 +64,7 @@ namespace BrokYoutubeDownloader
             {
                 if (spItems.Children.Count < 4)
                 {
+                 
                     var item = new UserControls.usItem(txtUrl.Text.Trim())
                     {
                         Name = spItems.Name + spItems.Children.Count,

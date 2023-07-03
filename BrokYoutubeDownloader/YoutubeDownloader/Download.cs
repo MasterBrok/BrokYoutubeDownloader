@@ -1,6 +1,9 @@
-﻿using System.Linq;
+﻿using BrokYoutubeDownloader.UserControls;
+using System;
+using System.Linq;
 using System.Threading.Tasks;
 using YoutubeExplode;
+using YoutubeExplode.Videos.Streams;
 
 namespace BrokYoutubeDownloader.YoutubeDownloader
 {
@@ -42,6 +45,6 @@ namespace BrokYoutubeDownloader.YoutubeDownloader
                 video.Size = item;
             }
             return video;
-            }
+        }
     }
 }
