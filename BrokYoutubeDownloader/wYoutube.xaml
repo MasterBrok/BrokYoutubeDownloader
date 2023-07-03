@@ -43,7 +43,7 @@
                         <Label
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top"
-                            Content="Developer : Sama And Brok"
+                            Content="Developer : Brok"
                             Style="{StaticResource stLabelHeader}" />
                         <Label
                             HorizontalAlignment="Left"
