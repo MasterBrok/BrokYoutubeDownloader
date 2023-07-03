@@ -53,7 +53,7 @@
                         <Label
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top"
-                            Content="Telegram : @BrokDotNet"
+                            Content="Telegram : @MasterBrok &amp; Github : MasterBrok"
                             Style="{StaticResource stLabelHeader}" />
                     </StackPanel>
                     <StackPanel

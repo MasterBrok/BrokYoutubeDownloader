@@ -3,7 +3,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:BrokYoutubeDownloader.Controls">
 
-
     <Style TargetType="{x:Type local:ccTextBox}">
         <Setter Property="SelectionBrush" Value="{DynamicResource SelectionContent}" />
         <Setter Property="Width" Value="340" />
@@ -93,8 +92,6 @@
         </Setter>
     </Style>
 
-
-
     <Style TargetType="{x:Type local:ccLabel}">
         <Setter Property="Margin" Value="5,0,5,0" />
         <Setter Property="Padding" Value="2" />
@@ -120,7 +117,6 @@
             </Setter.Value>
         </Setter>
     </Style>
-
 
     <Style TargetType="{x:Type local:ccProgressBar}">
         <Setter Property="Height" Value="50" />
@@ -157,22 +153,8 @@
                             </Rectangle>
                         </StackPanel>
                     </Border>
-                    <!--<ControlTemplate.Triggers>
-                    <EventTrigger RoutedEvent="Loaded">
-                    <BeginStoryboard>
-                    <Storyboard>
-                    <DoubleAnimation
-                    Storyboard.TargetName="Value"
-                    Storyboard.TargetProperty="Width"
-                    To="780" />
-                    </Storyboard>
-                    </BeginStoryboard>
-                    </EventTrigger>
-                    </ControlTemplate.Triggers>-->
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-
-
 </ResourceDictionary>

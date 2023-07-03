@@ -5,7 +5,13 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;ARM64</Platforms>
+    <ApplicationIcon>icons8_youtube.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="icons8_youtube.ico" />
+  </ItemGroup>
 
 
   <ItemGroup>
